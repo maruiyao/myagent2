@@ -2,6 +2,10 @@
 yaml内置配置文件
 k：v
 """
+import dashscope
+
+dashscope.base_http_api_url = 'https://dashscope-intl.aliyuncs.com/api/v1'
+
 import yaml
 from utils.path_tool import get_abs_path
 
