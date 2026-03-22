@@ -23,7 +23,7 @@ def monitor_tool(
     try:
         result =handler(request)
         logger.info(f"[tool monitor]工具{request.tool_call['name']}调用成功")
-        if result.tool_call['name'] == "fill_context_for_report":
+        if request.tool_call['name'] == "fill_context_for_report":
             request.runtime.context["report"]=True #这一行代码本身就是report这个key的定义。
         return result
     except Exception as e:

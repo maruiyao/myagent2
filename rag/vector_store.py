@@ -11,10 +11,11 @@ import os
 
 class VectorStoreSurvice:
     def __init__(self):
+        self.db_path = get_abs_path(chroma_conf['persist_directory'])
         self.vector_store = Chroma(
             collection_name=chroma_conf['collection_name'],
             embedding_function=embed_model,
-            persist_directory=chroma_conf['persist_directory'],
+            persist_directory=self.db_path,
         )
         #文本分割起
         self.spliter=RecursiveCharacterTextSplitter(
@@ -24,6 +25,7 @@ class VectorStoreSurvice:
             length_function=len,#长度统计方法
         )
     def get_retriever(self):#获取检索器对象
+        print(f"--- 调试：正在从路径检索: {self.db_path} ---")
         return self.vector_store.as_retriever(search_kwargs={"k": chroma_conf["k"]})
     def load_document(self):
         """
@@ -88,7 +90,8 @@ if __name__ == "__main__":
 
     retriever = vs.get_retriever()
 
-    res = retriever.invoke("迷路")
+    res = retriever.invoke("扫地机器人迷路迷路")
+
     for r in res:
         print(r.page_content)
         print("-"*20)
