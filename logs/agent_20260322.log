@@ -1,0 +1,546 @@
+2026-03-22 12:54:30,255 - agent - INFO -logger_handler.py:54- 信息日志
+2026-03-22 12:54:30,255 - agent - ERROR -logger_handler.py:55- 错误日志
+2026-03-22 12:54:30,255 - agent - WARNING -logger_handler.py:56- 警告日志
+2026-03-22 12:54:30,255 - agent - DEBUG -logger_handler.py:57- 调试日志
+2026-03-22 15:17:31,260 - agent - ERROR -file_handler.py:44- [listdir_with_allowed_type]data不是文件夹
+2026-03-22 15:17:31,260 - agent - ERROR -file_handler.py:11- [md5计算]文件txt不存在
+2026-03-22 15:17:31,260 - agent - WARNING -vector_store.py:68- [加载知识库]txt内没有有效文本内容，跳过
+2026-03-22 15:17:31,260 - agent - ERROR -file_handler.py:11- [md5计算]文件pdf不存在
+2026-03-22 15:17:31,260 - agent - WARNING -vector_store.py:68- [加载知识库]pdf内没有有效文本内容，跳过
+2026-03-22 15:20:19,633 - agent - ERROR -vector_store.py:81- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt加载失败：status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+Traceback (most recent call last):
+  File "/Users/maruiyao/PycharmProjects/myagent2/rag/vector_store.py", line 75, in load_document
+    self.vector_store.add_documents(split_document)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_core/vectorstores/base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_chroma/vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+2026-03-22 15:20:20,561 - agent - ERROR -vector_store.py:81- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt加载失败：status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+Traceback (most recent call last):
+  File "/Users/maruiyao/PycharmProjects/myagent2/rag/vector_store.py", line 75, in load_document
+    self.vector_store.add_documents(split_document)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_core/vectorstores/base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_chroma/vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+2026-03-22 15:20:22,076 - agent - ERROR -vector_store.py:81- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt加载失败：status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+Traceback (most recent call last):
+  File "/Users/maruiyao/PycharmProjects/myagent2/rag/vector_store.py", line 75, in load_document
+    self.vector_store.add_documents(split_document)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_core/vectorstores/base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_chroma/vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+2026-03-22 15:20:23,026 - agent - ERROR -vector_store.py:81- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt加载失败：status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+Traceback (most recent call last):
+  File "/Users/maruiyao/PycharmProjects/myagent2/rag/vector_store.py", line 75, in load_document
+    self.vector_store.add_documents(split_document)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_core/vectorstores/base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_chroma/vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+2026-03-22 15:20:24,047 - agent - ERROR -vector_store.py:81- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt加载失败：status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+Traceback (most recent call last):
+  File "/Users/maruiyao/PycharmProjects/myagent2/rag/vector_store.py", line 75, in load_document
+    self.vector_store.add_documents(split_document)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_core/vectorstores/base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_chroma/vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+2026-03-22 15:20:25,387 - agent - ERROR -vector_store.py:81- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf加载失败：status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+Traceback (most recent call last):
+  File "/Users/maruiyao/PycharmProjects/myagent2/rag/vector_store.py", line 75, in load_document
+    self.vector_store.add_documents(split_document)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_core/vectorstores/base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_chroma/vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "/opt/anaconda3/envs/ai_env/lib/python3.10/site-packages/langchain_community/embeddings/dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 401 
+ code: InvalidApiKey 
+ message: Invalid API-key provided.
+2026-03-22 15:22:08,280 - agent - INFO -vector_store.py:78- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt 内容加载成功
+2026-03-22 15:22:10,593 - agent - INFO -vector_store.py:78- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt 内容加载成功
+2026-03-22 15:22:15,646 - agent - INFO -vector_store.py:78- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt 内容加载成功
+2026-03-22 15:22:18,507 - agent - INFO -vector_store.py:78- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt 内容加载成功
+2026-03-22 15:22:21,880 - agent - INFO -vector_store.py:78- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt 内容加载成功
+2026-03-22 15:22:23,661 - agent - INFO -vector_store.py:78- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf 内容加载成功
+2026-03-22 15:25:57,920 - agent - INFO -vector_store.py:63- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 15:25:57,921 - agent - INFO -vector_store.py:63- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 15:25:57,922 - agent - INFO -vector_store.py:63- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 15:25:57,922 - agent - INFO -vector_store.py:63- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 15:25:57,922 - agent - INFO -vector_store.py:63- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 15:25:57,923 - agent - INFO -vector_store.py:63- [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 15:31:50,504 - agent - INFO - logger_handler.py:69 - 这是一条蓝色的信息日志
+2026-03-22 15:31:50,505 - agent - ERROR - logger_handler.py:70 - 这是一条带蓝色正文的错误日志
+2026-03-22 15:31:50,505 - agent - DEBUG - logger_handler.py:71 - 这条调试日志在控制台看不见，但在文件里能看见
+2026-03-22 15:32:05,581 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 15:32:05,582 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 15:32:05,583 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 15:32:05,583 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 15:32:05,583 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 15:32:05,584 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 17:33:18,391 - agent - WARNING - agent_tools.py:99 - [fetch_external_data]未能检索到用户：101在2025-01的使用记录数据
+2026-03-22 18:48:48,480 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 18:48:48,481 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在地区如何保养
+2026-03-22 18:48:51,503 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_location
+2026-03-22 18:48:51,503 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 18:48:51,504 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_location调用成功
+2026-03-22 18:48:51,504 - agent - ERROR - middleware.py:30 - 工具get_user_location调用失败，原因：'ToolMessage' object has no attribute 'tool_call'
+2026-03-22 18:52:00,818 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 18:52:00,819 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在地区如何保养
+2026-03-22 18:52:09,785 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_location
+2026-03-22 18:52:09,788 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 18:52:09,793 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_location调用成功
+2026-03-22 18:52:09,794 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 18:52:09,794 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 杭州
+2026-03-22 18:52:13,362 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_weather
+2026-03-22 18:52:13,362 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'city': '杭州'}
+2026-03-22 18:52:13,363 - agent - INFO - middleware.py:25 - [tool monitor]工具get_weather调用成功
+2026-03-22 18:52:13,364 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 18:52:13,364 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市杭州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-22 18:52:20,480 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 18:52:20,480 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人在湿度50%晴天环境下的保养方法'}
+2026-03-22 18:52:21,749 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 18:52:21,751 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-22 18:52:21,751 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人在湿度50%晴天环境下的具体保养方法。
+2026-03-22 18:52:27,034 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 18:52:27,034 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人日常保养维护指南'}
+2026-03-22 18:52:31,244 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 18:52:31,245 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-22 18:52:31,245 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 扫地机器人日常保养维护包括：定期清理尘盒和滤网，避免堵塞；检查并清理滚刷和边刷上的缠绕物；擦拭传感器和充电触点，确保正常工作；定期检查电池状态，避免过度放电；使用后及时清空垃圾并保持机器干燥清洁。
+2026-03-22 18:59:55,320 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 18:59:55,320 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-03-22 18:59:58,045 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_id
+2026-03-22 18:59:58,045 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 18:59:58,047 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-03-22 18:59:58,048 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 18:59:58,048 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 1002
+2026-03-22 19:00:00,714 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_current_month
+2026-03-22 19:00:00,714 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:00:00,715 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-03-22 19:00:00,716 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:00:00,716 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 2025-11
+2026-03-22 19:00:03,877 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fill_context_for_report
+2026-03-22 19:00:03,877 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:00:03,878 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-03-22 19:00:03,879 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-22 19:00:03,879 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-03-22 19:00:10,937 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fetch_external_data
+2026-03-22 19:00:10,937 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'user_id': '1002', 'month': '2025-11'}
+2026-03-22 19:00:10,940 - agent - INFO - middleware.py:25 - [tool monitor]工具fetch_external_data调用成功
+2026-03-22 19:00:10,941 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-22 19:00:10,941 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {"特征": "70㎡公寓 | 情侣 | 瓷砖", "效率": "覆盖率:90%\\n避障失败:0次/周", "耗材": "边刷寿命:剩余45天\\n尘盒清理:每4天", "对比": "拖地功能使用率与同类平均水平持平"}
+2026-03-22 19:00:14,328 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:00:14,328 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人保养建议 瓷砖地面'}
+2026-03-22 19:00:18,494 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:00:18,496 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有11条消息。
+2026-03-22 19:00:18,496 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 定期清理扫地机器人的滚刷和边刷，防止毛发缠绕；及时清空尘盒，避免灰尘堆积影响吸力；检查并清洁传感器，确保导航正常；瓷砖地面较硬且易积灰，建议每周至少清理一次滚刷和滤网；若机器人有拖地功能，使用后需清洗拖布并晾干，防止异味和细菌滋生。
+2026-03-22 19:00:25,903 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:00:25,903 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人使用频率建议 70平米公寓'}
+2026-03-22 19:00:28,356 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:00:28,358 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有13条消息。
+2026-03-22 19:00:28,358 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 对于70平米的公寓，建议每周使用扫地机器人清扫2-3次；若家中有宠物或灰尘较多，可适当增加至每日1次。
+2026-03-22 19:06:29,890 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 19:06:29,891 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-03-22 19:06:34,192 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_id
+2026-03-22 19:06:34,192 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:06:34,193 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-03-22 19:06:34,194 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 19:06:34,195 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 1007
+2026-03-22 19:06:36,181 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_current_month
+2026-03-22 19:06:36,181 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:06:36,182 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-03-22 19:06:36,183 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:06:36,183 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 2025-08
+2026-03-22 19:06:38,248 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fill_context_for_report
+2026-03-22 19:06:38,248 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:06:38,249 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-03-22 19:06:38,250 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-22 19:06:38,250 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-03-22 19:06:40,693 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fetch_external_data
+2026-03-22 19:06:40,693 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'user_id': '1007', 'month': '2025-08'}
+2026-03-22 19:06:40,698 - agent - INFO - middleware.py:25 - [tool monitor]工具fetch_external_data调用成功
+2026-03-22 19:06:40,699 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-22 19:06:40,699 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {"特征": "55㎡一居 | 独居 | 复合地板", "效率": "覆盖率:88%\\n日均清扫:33㎡\\n沿边清扫漏扫增多", "耗材": "滤网寿命:剩余70天\\n尘盒清理:每3天", "对比": "清洁效率优于65%小户型用户"}
+2026-03-22 19:06:42,604 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:06:42,605 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '复合地板清洁建议 扫地机器人'}
+2026-03-22 19:06:45,489 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:06:45,491 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有11条消息。
+2026-03-22 19:06:45,491 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 使用扫地机器人清洁复合地板时，应选择带有软质滚刷或吸口设计的机型，避免使用湿拖功能或确保拖地模块湿度可控，以防水分渗入地板接缝导致膨胀变形；定期清理机器人滚刷和滤网，防止砂砾划伤地板表面。
+2026-03-22 19:06:47,511 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:06:47,511 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '沿边清扫漏扫问题解决方法'}
+2026-03-22 19:06:50,513 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:06:50,515 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有13条消息。
+2026-03-22 19:06:50,515 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 沿边清扫漏扫问题的解决方法包括：优化边刷结构设计以增强贴边能力，调整边刷转速与主刷协同工作，提升沿边传感器精度以准确识别边界，以及通过算法优化清扫路径确保沿边区域全覆盖。
+2026-03-22 19:07:23,969 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 19:07:23,969 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-03-22 19:07:26,456 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_id
+2026-03-22 19:07:26,456 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:07:26,457 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-03-22 19:07:26,458 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 19:07:26,459 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 1006
+2026-03-22 19:07:28,460 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_current_month
+2026-03-22 19:07:28,461 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:07:28,463 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-03-22 19:07:28,464 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:07:28,464 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 2025-12
+2026-03-22 19:07:31,090 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fill_context_for_report
+2026-03-22 19:07:31,091 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:07:31,093 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-03-22 19:07:31,093 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-22 19:07:31,093 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-03-22 19:07:32,847 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fetch_external_data
+2026-03-22 19:07:32,847 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'user_id': '1006', 'month': '2025-12'}
+2026-03-22 19:07:32,850 - agent - INFO - middleware.py:25 - [tool monitor]工具fetch_external_data调用成功
+2026-03-22 19:07:32,851 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-22 19:07:32,851 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {"特征": "150㎡别墅 | 儿童 | 多层", "效率": "跨楼层成功率:100%\\n玩具避障率:95%", "耗材": "边刷寿命:剩余45天\\n集尘袋消耗:0.7个/月", "对比": "清洁效率优于95%大户型多层用户"}
+2026-03-22 19:07:34,910 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:07:34,910 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '多层别墅扫地机器人使用建议 边刷更换周期'}
+2026-03-22 19:07:36,790 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:07:36,792 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有11条消息。
+2026-03-22 19:07:36,792 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提及多层别墅扫地机器人使用建议及边刷更换周期的具体信息。
+2026-03-22 19:07:40,178 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:07:40,179 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人边刷更换周期'}
+2026-03-22 19:07:42,118 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:07:42,120 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有13条消息。
+2026-03-22 19:07:42,120 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 边刷建议每6-12个月更换一次，具体周期视使用频率和地面状况而定。
+2026-03-22 19:07:46,465 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:07:46,466 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '多层别墅扫地机器人使用建议'}
+2026-03-22 19:07:50,516 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:07:50,518 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有15条消息。
+2026-03-22 19:07:50,518 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 多层别墅使用扫地机器人时，建议选择具备自动上下楼梯功能或可跨楼层建图的型号；若无此功能，需在每层分别设置充电座并手动搬运机器人；确保各楼层Wi-Fi信号覆盖良好以支持远程控制和地图同步；定期清理尘盒和滚刷以维持清洁效率。
+2026-03-22 19:10:30,910 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 19:10:30,910 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 在我的城市扫地机器人如何使用
+2026-03-22 19:10:33,850 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_location
+2026-03-22 19:10:33,851 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:10:33,852 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_location调用成功
+2026-03-22 19:10:33,853 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 19:10:33,853 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 杭州
+2026-03-22 19:10:39,174 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_weather
+2026-03-22 19:10:39,174 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'city': '杭州'}
+2026-03-22 19:10:39,175 - agent - INFO - middleware.py:25 - [tool monitor]工具get_weather调用成功
+2026-03-22 19:10:39,176 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:10:39,176 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市杭州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-22 19:11:31,437 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 19:11:31,438 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 在我的城市扫地机器人如何保养
+2026-03-22 19:11:37,343 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_location
+2026-03-22 19:11:37,343 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:11:37,344 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_location调用成功
+2026-03-22 19:11:37,345 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 19:11:37,345 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 合肥
+2026-03-22 19:11:40,507 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_weather
+2026-03-22 19:11:40,507 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'city': '合肥'}
+2026-03-22 19:11:40,508 - agent - INFO - middleware.py:25 - [tool monitor]工具get_weather调用成功
+2026-03-22 19:11:40,510 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:11:40,510 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市合肥天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-22 19:11:45,728 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:11:45,729 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人在湿度50%、空气质量优的环境下如何保养'}
+2026-03-22 19:11:47,747 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:11:47,748 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-22 19:11:47,748 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人在湿度50%、空气质量优环境下的具体保养方法。
+2026-03-22 19:14:13,098 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:14:13,099 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:14:13,100 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:14:13,100 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:14:13,100 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:14:13,102 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:15:04,156 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:15:04,156 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:15:04,157 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:15:04,158 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:15:04,158 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:15:04,159 - agent - INFO - vector_store.py:63 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:19:39,724 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:19:39,725 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:19:39,726 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:19:39,726 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:19:39,727 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:19:39,728 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:20:07,654 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:20:07,654 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:20:07,655 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:20:07,655 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:20:07,656 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:20:07,657 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:22:05,050 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:22:05,051 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:22:05,052 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:22:05,052 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:22:05,053 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:22:05,054 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:24:12,088 - agent - INFO - vector_store.py:74 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:24:12,089 - agent - INFO - vector_store.py:74 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:24:12,090 - agent - INFO - vector_store.py:74 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:24:12,090 - agent - INFO - vector_store.py:74 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:24:12,091 - agent - INFO - vector_store.py:74 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:24:12,092 - agent - INFO - vector_store.py:74 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:28:08,829 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:28:08,830 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:28:08,830 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:28:08,831 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:28:08,831 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:28:08,832 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:29:46,252 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:29:46,253 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:29:46,254 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:29:46,254 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:29:46,254 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:29:46,255 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:30:18,511 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:30:18,512 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:30:18,513 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:30:18,513 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:30:18,514 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:30:18,517 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:31:39,498 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt内容已经存在知识库内，跳过
+2026-03-22 19:31:39,499 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-03-22 19:31:39,500 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt内容已经存在知识库内，跳过
+2026-03-22 19:31:39,500 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-03-22 19:31:39,500 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt内容已经存在知识库内，跳过
+2026-03-22 19:31:39,501 - agent - INFO - vector_store.py:65 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-03-22 19:32:13,897 - agent - INFO - vector_store.py:80 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/选购指南.txt 内容加载成功
+2026-03-22 19:32:16,080 - agent - INFO - vector_store.py:80 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问2.txt 内容加载成功
+2026-03-22 19:32:21,101 - agent - INFO - vector_store.py:80 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/故障排除.txt 内容加载成功
+2026-03-22 19:32:23,983 - agent - INFO - vector_store.py:80 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫拖一体机器人100问.txt 内容加载成功
+2026-03-22 19:32:26,723 - agent - INFO - vector_store.py:80 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/维护保养.txt 内容加载成功
+2026-03-22 19:32:28,566 - agent - INFO - vector_store.py:80 - [加载知识库]/Users/maruiyao/PycharmProjects/myagent2/data/扫地机器人100问.pdf 内容加载成功
+2026-03-22 19:32:37,630 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 19:32:37,630 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 在我的城市扫地机器人如何保养
+2026-03-22 19:32:44,033 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_location
+2026-03-22 19:32:44,033 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:32:44,034 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_location调用成功
+2026-03-22 19:32:44,035 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 19:32:44,035 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 合肥
+2026-03-22 19:32:47,934 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_weather
+2026-03-22 19:32:47,934 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'city': '合肥'}
+2026-03-22 19:32:47,935 - agent - INFO - middleware.py:25 - [tool monitor]工具get_weather调用成功
+2026-03-22 19:32:47,936 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:32:47,936 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市合肥天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-22 19:32:51,610 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:32:51,610 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人在湿度50%、晴天环境下的保养方法'}
+2026-03-22 19:32:54,271 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:32:54,272 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-22 19:32:54,272 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 在湿度50%、晴天环境下，扫地机器人使用后应每日用干软布擦拭机身外壳，去除灰尘和水渍；每次清扫完成后及时清理防撞条缝隙中的毛发和线头，防止卡顿。
+2026-03-22 19:34:07,174 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 19:34:07,175 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 生成我的试用报告
+2026-03-22 19:34:10,564 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fill_context_for_report
+2026-03-22 19:34:10,565 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:34:10,567 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-03-22 19:34:10,568 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 19:34:10,568 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-03-22 19:34:19,681 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_id
+2026-03-22 19:34:19,681 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:34:19,683 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-03-22 19:34:19,684 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:34:19,684 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 1001
+2026-03-22 19:34:26,533 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_current_month
+2026-03-22 19:34:26,534 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:34:26,535 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-03-22 19:34:26,536 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-22 19:34:26,536 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 2025-02
+2026-03-22 19:34:32,985 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fetch_external_data
+2026-03-22 19:34:32,986 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'user_id': '1001', 'month': '2025-02'}
+2026-03-22 19:34:32,989 - agent - INFO - middleware.py:25 - [tool monitor]工具fetch_external_data调用成功
+2026-03-22 19:34:32,990 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-22 19:34:32,990 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {"特征": "65㎡公寓 | 单身 | 木地板", "效率": "覆盖率:86%\\n日均清扫:46㎡\\n漏扫区域:沙发底部（高度不足）", "耗材": "主刷寿命:剩余55天\\nHEPA滤网:剩余35%", "对比": "优于68%同面积用户（清洁频率更高）"}
+2026-03-22 19:34:35,520 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:34:35,520 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人主刷和HEPA滤网保养建议'}
+2026-03-22 19:34:39,441 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:34:39,448 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有11条消息。
+2026-03-22 19:34:39,448 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | HEPA滤网每周用软毛刷轻刷表面灰尘，每1-2个月用清水冲洗（不可揉搓）后阴凉晾干，3-6个月更换；主刷在普通家庭每3-6个月更换，宠物家庭或长毛地毯环境每1-3个月更换，出现磨损、变形或开裂应立即更换。
+2026-03-22 19:34:42,712 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:34:42,713 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人沙发底部清洁解决方案'}
+2026-03-22 19:34:46,089 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:34:46,092 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有13条消息。
+2026-03-22 19:34:46,093 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 确保沙发底部高度适配机器人机身，清理底部缠绕物和大颗粒杂物；在APP中设置该区域为“深度拖扫”以增强吸力和拖地次数；若家具底部为镜面，可设置“防撞区”或加装防撞条避免误判碰撞。
+2026-03-22 19:45:28,318 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 19:45:28,319 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 生成我的使用报告
+2026-03-22 19:45:31,551 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_id
+2026-03-22 19:45:31,554 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:45:31,556 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_id调用成功
+2026-03-22 19:45:31,620 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 19:45:31,621 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 1001
+2026-03-22 19:45:33,661 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_current_month
+2026-03-22 19:45:33,661 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:45:33,665 - agent - INFO - middleware.py:25 - [tool monitor]工具get_current_month调用成功
+2026-03-22 19:45:33,765 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:45:33,766 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 2025-02
+2026-03-22 19:45:36,422 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fill_context_for_report
+2026-03-22 19:45:36,423 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:45:36,425 - agent - INFO - middleware.py:25 - [tool monitor]工具fill_context_for_report调用成功
+2026-03-22 19:45:36,772 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-22 19:45:36,772 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-03-22 19:45:45,568 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：fetch_external_data
+2026-03-22 19:45:45,569 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'user_id': '1001', 'month': '2025-02'}
+2026-03-22 19:45:45,575 - agent - INFO - middleware.py:25 - [tool monitor]工具fetch_external_data调用成功
+2026-03-22 19:45:47,296 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-22 19:45:47,296 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {"特征": "65㎡公寓 | 单身 | 木地板", "效率": "覆盖率:86%\\n日均清扫:46㎡\\n漏扫区域:沙发底部（高度不足）", "耗材": "主刷寿命:剩余55天\\nHEPA滤网:剩余35%", "对比": "优于68%同面积用户（清洁频率更高）"}
+2026-03-22 19:45:50,095 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:45:50,096 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人主刷和HEPA滤网保养建议'}
+2026-03-22 19:45:53,757 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:45:54,997 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有11条消息。
+2026-03-22 19:45:54,997 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | HEPA滤网每周用软毛刷轻刷表面灰尘，每1-2个月用清水冲洗（不可揉搓）并阴凉晾干，3-6个月更换；主刷普通家庭3-6个月更换，宠物家庭或长毛地毯环境1-3个月更换，出现磨损、变形或开裂应立即更换。
+2026-03-22 19:45:57,131 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:45:57,131 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '扫地机器人沙发底部清洁解决方案'}
+2026-03-22 19:46:01,046 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:46:02,386 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有13条消息。
+2026-03-22 19:46:02,387 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 确保沙发底部高度适配机器人机身，清理底部缠绕物和大颗粒杂物；在APP中设置“深度拖扫”以增强吸力和拖地次数；若家具为镜面材质，可设置“防撞区”或加装防撞条避免误判碰撞；检查并更换破损拖布，取消该区域禁区设置。
+2026-03-22 19:47:27,064 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-22 19:47:27,067 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 在我的城市，扫地机器人怎么保养
+2026-03-22 19:47:36,354 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：get_user_location
+2026-03-22 19:47:36,355 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{}
+2026-03-22 19:47:36,361 - agent - INFO - middleware.py:25 - [tool monitor]工具get_user_location调用成功
+2026-03-22 19:47:36,397 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-22 19:47:36,398 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 杭州
+2026-03-22 19:47:40,614 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：rag_summarize
+2026-03-22 19:47:40,615 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': '高湿度环境 扫地机器人 保养'}
+2026-03-22 19:47:49,206 - agent - INFO - middleware.py:25 - [tool monitor]工具rag_summarize调用成功
+2026-03-22 19:47:50,385 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-22 19:47:50,385 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 高湿度环境下使用扫地机器人，应避免在卫生间等有积水区域拖地，仅进行扫地；每次使用后及时清理机身底部并擦拭干水渍，防止受潮；若涉及拖地功能，需立即清理拖布和水箱，保持干燥，以防霉变或堵塞。

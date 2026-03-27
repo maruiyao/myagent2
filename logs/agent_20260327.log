@@ -1,0 +1,14 @@
+2026-03-27 10:51:35,434 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 10:51:35,440 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 请使用学生搜题记录rag工具为你寻找答案：id007，如何解微分方程
+2026-03-27 10:51:38,647 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：student_rag_search
+2026-03-27 10:51:38,648 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': 'id007，如何解微分方程'}
+2026-03-27 10:51:43,771 - agent - INFO - middleware.py:25 - [tool monitor]工具student_rag_search调用成功
+2026-03-27 10:51:43,984 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 10:51:43,984 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未涉及微分方程的解法。
+2026-03-27 10:52:03,856 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 10:52:03,857 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 请使用学生搜题记录rag工具为你寻找答案：id 008 如何保养扫地机器人
+2026-03-27 10:52:08,750 - agent - INFO - middleware.py:21 - [tool monitor]执行工具：student_rag_search
+2026-03-27 10:52:08,751 - agent - INFO - middleware.py:22 - [tool monitor]传入参数：{'query': 'id 008 如何保养扫地机器人'}
+2026-03-27 10:52:13,264 - agent - INFO - middleware.py:25 - [tool monitor]工具student_rag_search调用成功
+2026-03-27 10:52:15,095 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 10:52:15,095 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 每日使用后用干软布擦拭机身外壳，清理防撞条缝隙的毛发和线头；每日检查边刷旋转是否卡顿，及时清理以防电机烧毁；每次清扫后将模式调至“待机”以减少电量消耗；每月检查扫拖一体机型的拖地模组接口，确保无灰尘杂物；每周检查充电座电源适配器有无发热或异响；若沾到宠物粪便，立即用湿巾清理并用中性洗涤剂擦拭。

@@ -5,6 +5,8 @@ from rag.rag_survice import RagSummarizeService
 import random
 from utils.config_handler import agent_conf
 from utils.path_tool import get_abs_path
+from utils.student_db import insert_record
+from datetime import datetime
 
 rag = RagSummarizeService()
 user_ids = ["1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008", "1009", "1010",]
@@ -16,6 +18,19 @@ external_data = {}
 
 @tool (description="从向量库中检索相关资料")
 def rag_summarize(query:str)->str:
+    return rag.rag_summarize(query)
+
+
+@tool(description="学生搜题记录rag：从向量库中检索学生问题的解答，并自动记录学生的ID、搜题时间和题目到学生错题数据库中")
+def student_rag_search(query: str) -> str:
+    # Get student_id using the existing logic
+    student_id = random.choice(user_ids)
+    search_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # 自动获取搜题的学生id，时间，题目，并写入学生错题数据库中
+    insert_record(student_id, search_time, query)
+    
+    # Get the RAG result
     return rag.rag_summarize(query)
 
 
